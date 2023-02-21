@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="map" style="width:100%;height:400px;"></div>
+<script src="http://maps.openweathermap.org/maps/2.0/weather/TA2/{1}/{1}/{1}?appid={2158be720120060837d078a8403ac911}"></script>
+
+<script>
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8,
+      center: {lat: -34.397, lng: 150.644}
+    });
+  }
+</script>
+
+<script async defer
+        src="http://maps.openweathermap.org/maps/2.0/weather/TA2/{1}/{1}/{1}?appid={2158be720120060837d078a8403ac911}&callback=initMap">
+</script>
+
+</body>
+</html>

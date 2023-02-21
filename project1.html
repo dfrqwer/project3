@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="project1.css"/>
+    <style type="text/css">
+        a:visited{color: black}
+    </style>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>NamelessFlower</title>
+</head>
+<body>
+<div class="navbar-container">
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="https://i.pinimg.com/originals/72/56/cc/7256ccd6dbe56ed82de21fb8a89cfa5a.jpg" width="150" height="200"  >
+            <div></div>
+            <div>hôm nay  </div>
+            <div>ngày mai</div>
+            <div>tuần sau</div>
+
+        </div>
+        <div class="container">
+            <div class="search-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" placeholder="location to know weather">
+                <button class="fa-solid fa-magnifying-glass"></button>
+            </div>
+
+            <div class="not-found">
+                <img src="images/404.png">
+                <p>Oops! Invalid location :/</p>
+            </div>
+
+            <div class="weather-box">
+                <img src="">
+                <p class="temperature"></p>
+                <p class="description"></p>
+            </div>
+
+            <div class="weather-details">
+                <div class="humidity">
+                    <i class="fa-solid fa-water"></i>
+                    <div class="text">
+                        <span></span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="text">
+                        <span></span>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="navbar-right">
+            <div class="find-a-store">
+
+                <svg
+                        aria-hidden="true"
+                        class="valign-middle pr2"
+                        focusable="false"
+                        preserveAspectRatio="xMidYMid meet"
+                        style="
+                                width: 32px;
+                                height: 32px;
+                                overflow: visible;
+                                fill: currentColor;
+                            "
+                        viewBox="0 0 24 24"
+                >
+                    <path
+                            d="M12,11.475 C10.5214286,11.475 9.32142857,10.299 9.32142857,8.85 C9.32142857,7.401 10.5214286,6.225 12,6.225 C13.4785714,6.225 14.6785714,7.401 14.6785714,8.85 C14.6785714,10.299 13.4785714,11.475 12,11.475 M12,1.5 C7.85357143,1.5 4.5,4.7865 4.5,8.85 C4.5,14.3625 12,22.5 12,22.5 C12,22.5 19.5,14.3625 19.5,8.85 C19.5,4.7865 16.1464286,1.5 12,1.5"
+                    ></path>
+                </svg>
+                <div>Địa chỉ</div>
+            </div>
+            <div class="sign-in"><a href="login.html" >Sign in </a></div>
+            <a href="dangky.html"> <div class="join-now">Join now</div> </a>
+            <div class="light-modes-container">
+                <label class="light-modes">
+                    <input class='toggle-checkbox' type='checkbox' id="color-mode"></input>
+                    <div class='toggle-slot'>
+                        <div class='sun-icon-wrapper'>
+                            <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                        </div>
+                        <div class='toggle-button'></div>
+                        <div class='moon-icon-wrapper'>
+                            <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div>
+
+        <a href="https://www.facebook.com/genji.akahijo" target="_blank"> <h1>Facebook</h1> </a>
+        <p> <a href="https://www.instagram.com/nguyenhuuuy5/" target="_blank"> <h1>Instagram</h1> </a>
+
+    </div>
+    <div style="margin-top: 0px" >
+        <h2> </h2>
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+<script>
+    const checkbox = document.getElementById('color-mode');
+
+    checkbox.addEventListener('change', () => {
+        toggleDark();
+    })
+    function toggleDark() {
+        const element = document.body;
+        element.classList.toggle("body-dark-mode");
+        document.querySelectorAll('.button').forEach(function (element) {
+            element.classList.toggle("button-dark-mode");
+        });
+        const logo = document.getElementsByClassName("filter-light")[0];
+        logo.classList.toggle("filter-dark");
+        document.querySelectorAll('.link').forEach(function (element) {
+            element.classList.toggle("link-dark-mode");
+        });
+    }
+
+</script>
+</html>
